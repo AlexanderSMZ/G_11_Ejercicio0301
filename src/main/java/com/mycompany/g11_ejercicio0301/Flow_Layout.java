@@ -40,7 +40,6 @@ public class Flow_Layout extends JFrame{
    public void iniciarPanel(){
        this.jPanel1 = new JPanel();
        this.jPanel1.setBackground(Color.GRAY);
-       //this.jPanel1.setBorder(BorderFactory.createTitledBorder("Panel Principal"));
        this.setLayout(new FlowLayout());
    }
    
@@ -48,43 +47,35 @@ public class Flow_Layout extends JFrame{
        
        this.jLabelList = new ArrayList<>();
        
-       for(var i=0;i<5;i++)
+       for(var i=0;i<5;i++){
         this.jLabelList.add(new JLabel());
+        this.jLabelList.get(i).setOpaque(true);  
+        this.jPanel1.add(this.jLabelList.get(i));  
+        this.jLabelList.get(i).setBorder(BorderFactory.createTitledBorder("")); 
+       }
+       
        //this.jLabelList.add(new JLabel());
+       //this.jLabelList.get(i).setOpaque(true);  
+       //this.jPanel1.add(this.jLabelList.get(i));  
+       //this.jLabelList.get(i).setBorder(BorderFactory.createTitledBorder("")); 
+       //this.jLabelList.get(1).setHorizontalAlignment(SwingConstants.CENTER);       
+              
        
-       for(var a=0;a<5;a++)
-        this.jLabelList.get(a).setBorder(BorderFactory.createTitledBorder(""));       
-       
+       //////////////       
        this.jLabelList.get(0).setBackground(Color.GRAY);
-       this.jLabelList.get(0).setOpaque(true);
        this.jLabelList.get(0).setText("Button 1");
-       this.jPanel1.add(this.jLabelList.get(0));
-       
        //////////////
        this.jLabelList.get(1).setBackground(Color.GRAY);
-       this.jLabelList.get(1).setOpaque(true);
        this.jLabelList.get(1).setText("2");
-       this.jPanel1.add(this.jLabelList.get(1));
        //////////////
        this.jLabelList.get(2).setBackground(Color.GRAY);
-       this.jLabelList.get(2).setOpaque(true);
        this.jLabelList.get(2).setText("Button 3");
-       this.jPanel1.add(this.jLabelList.get(2));
        //////////////
        this.jLabelList.get(3).setBackground(Color.GRAY);
-       this.jLabelList.get(3).setOpaque(true);
        this.jLabelList.get(3).setText("Long_Named Button 4");
-       this.jPanel1.add(this.jLabelList.get(3));
        //////////////
        this.jLabelList.get(4).setBackground(Color.GRAY);
-       this.jLabelList.get(4).setOpaque(true);
        this.jLabelList.get(4).setText("Button 5");
-       this.jPanel1.add(this.jLabelList.get(4));
-   
-       //this.jLabelList.get(1).setHorizontalAlignment(SwingConstants.CENTER);
-       
-       
-       
    }
     
 }

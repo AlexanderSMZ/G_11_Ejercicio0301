@@ -22,9 +22,7 @@ import javax.swing.SwingConstants;
 public class Border_Layout extends JFrame {
  
     private JPanel jPanel1;
-    private JPanel jPanelBandera;
     private List<JLabel> jLabelList;
-    private List<JLabel> jLabelBanderaList;
     
     
    public Border_Layout (String title) {
@@ -38,7 +36,6 @@ public class Border_Layout extends JFrame {
 
    public void iniciarComponentes(){
         this.iniciarPanel();
-        this.iniciarBandera();
         this.iniciarEtiquetas();
    }
    
@@ -86,30 +83,5 @@ public class Border_Layout extends JFrame {
        this.jPanel1.add(this.jLabelList.get(4),BorderLayout.WEST);
        
        
-   }
-   
-   public void iniciarBandera(){
-       this.jPanelBandera = new JPanel();
-       this.jPanelBandera.setLayout(new GridLayout(4,1));
-       
-       this.jLabelBanderaList = new ArrayList<>();
-       for(var i=0;i<4;i++)
-           this.jLabelBanderaList.add(new JLabel());
-       
-       
-       this.jLabelBanderaList.get(0).setBackground(Color.YELLOW);
-       this.jLabelBanderaList.get(0).setOpaque(true);
-       this.jLabelBanderaList.get(1).setBackground(Color.YELLOW);
-       this.jLabelBanderaList.get(1).setOpaque(true);
-       this.jLabelBanderaList.get(2).setBackground(Color.BLUE);
-       this.jLabelBanderaList.get(2).setOpaque(true);
-       this.jLabelBanderaList.get(3).setBackground(Color.RED);
-       this.jLabelBanderaList.get(3).setOpaque(true);
-       
-       
-       for(var i=0;i<4;i++)
-           this.jPanelBandera.add(this.jLabelBanderaList.get(i));
-       
-       
-   }          
+   }       
 }

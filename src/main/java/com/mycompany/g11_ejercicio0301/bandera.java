@@ -30,7 +30,7 @@ public class bandera extends JFrame{
    public bandera (String title) {
         super(title);
         this.setSize(450, 300);
-        this.setLocation(250, 400);
+        this.setLocation(175, 325);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.iniciarComponentes();
         this.setContentPane(this.jPanel1);
